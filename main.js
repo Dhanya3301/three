@@ -5,7 +5,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 const scene = new THREE.Scene();
 
-const geometry = new THREE.TorusGeometry(10, 3, 16, 200);
+const geometry = new THREE.TorusGeometry(7, 3, 16, 200);
 const material = new THREE.MeshStandardMaterial({
   color: "#fff",
   wireframe: true,
@@ -71,8 +71,8 @@ loop();
 
 const tl = gsap.timeline({ defaults: { duration: 1 } });
 tl.fromTo(mesh.scale, { z: 0, x: 0, y: 0 }, { z: 1, x: 1, y: 1 });
-tl.fromTo("nav", { y: "-100%" }, { y: "0%" });
-tl.fromTo(".title", { opacity: 0 }, { opacity: 1 });
+// tl.fromTo("nav", { y: "-100%" }, { y: "0%" });
+// tl.fromTo(".title", { opacity: 0 }, { opacity: 1 });
 // tl.fromTo(camera.position, { z: 40, x: 10, y: 20 }, { z: -40, x: 10, y: 0 });
 
 let mouseDown = false;
